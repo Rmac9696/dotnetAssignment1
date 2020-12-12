@@ -1,0 +1,92 @@
+﻿header {
+    background-image: linear-gradient(white,#4da6ff);
+    margin: 0px;
+    padding: 10px;
+    height: auto;
+    font-size: 35px;
+    border-bottom: 5px solid black;
+}
+
+div.parent {
+    display: table
+}
+
+    div.parent > div {
+        display: table-cell;
+        height: 100%;
+    }
+
+body {
+    overflow-y: scroll;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("/misc/background.jpg");
+    background-size: 200%,200%;
+    background-repeat: repeat-y;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+div.content {
+    font-size: 22px;
+    color: #4da6ff;
+    background-color: ghostwhite;
+    border: 2px solid black;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    padding: 10px;
+}
+
+div.name {
+    color: #ffbf00;
+    background-color: rgba(0,0,0,0.75);
+    width: inherit;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+div.link {
+    color: #ffbf00;
+    background-color: rgba(0,0,0,0.75);
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+    div.link a:link, div.link a:visited, div.link a:active {
+        text-decoration: none;
+        color: #ffbf00;
+        background-color: inherit;
+        width: inherit;
+        height: inherit;
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    div.link:hover, div.link a:hover {
+        text-decoration: none;
+        color: black;
+        background-color: #ffbf00;
+    }
+
+table.A tr td {
+    color: #4da6ff
+}
+
+
+footer {
+    margin-top: auto;
+    border-top: 5px solid black;
+    color: #ffbf00;
+    background-color: #262626;
+    font-size: 10px;
+}

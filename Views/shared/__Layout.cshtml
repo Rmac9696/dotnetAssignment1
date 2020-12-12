@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+@using DOTNET_lab4
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="parent">
+                <div class="name">Ryan MacQueen |</div><div class="link"> @Html.ActionLink("Main Page", "Index", "Home")</div> <div class="link"> @Html.ActionLink("Student", "Index", "Students")</div> <div class="link"> @Html.ActionLink("Community", "Index", "Communities") </div>
+            </div>
+        </header>
+        <div class="content">
+            @RenderBody()
+            @RenderSection("Scripts", required:false)
+        </div>
+        <footer>
+            <p>
+               |Ryan Macqueen\lab-4| 
+            </p>
+
+        </footer>
+    </div>
+</body>
+</html>

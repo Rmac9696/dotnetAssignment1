@@ -1,0 +1,43 @@
+﻿@model DOTNET_lab4.Models.ViewModels.StudentMembershipsViewModel
+@{
+    ViewData["Title"] = "EditMemberships";
+    Layout = "~/Views/shared/__Layout.cshtml";
+}
+
+<h1>Edit Memberships:</h1>
+<h2>Student: @Model.student.FullName </h2>
+<table class="table">
+    <tr>
+        <th>| Community |</th>
+        <th> Register/Unregister |</th>
+    </tr>
+
+    @foreach (var item in Model.student.Membership)
+    {
+        string id = item.StudentID + "," + item.CommunityID; // send the composite key of the relationship in as id, delimit with ','
+        <tr>
+            <td>
+                 @item.community.Title 
+            </td>
+            <td>
+                <a asp-action="SetMembership" asp-route-id="@id"> Unregister </a>
+            </td>
+        </tr>
+    }
+    <hr>
+
+    @foreach (var item in Model.communities)
+    {
+        string id = Model.student.id + "," + item.ID; // send the composite key of the relationship in as id, delimit with ','
+        <tr>
+            <td>
+                 @item.Title 
+            </td>
+            <td>
+                 <a asp-action="SetMembership" asp-route-id="@id"> Register </a> 
+            </td>
+        </tr>
+    }
+       
+</table>
+<a asp-action="Index" >back to list</a>
