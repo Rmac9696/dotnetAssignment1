@@ -57,21 +57,50 @@ namespace DOTNET_lab4.Controllers
         }
 
         // GET: Students/EditMemberships/5
-        public async Task<IActionResult> EditMemberships(int id)
+        public async Task<IActionResult> EditMemberships(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
             var viewModel = new StudentMembershipsViewModel();
             viewModel.student = _context.Students
                 .Include(i => i.Membership)
                 .ThenInclude(i => i.community) // fetch related data to student
                 .Where(i => i.id == id).Single();
 
-            var members = viewModel.student.Membership.Select(m => m.community).ToArray();
+            var members = viewModel.student.Membership.Select(m => m.community).ToArray(); // make queryable array
 
             viewModel.communities = await _context.Communities.Select(i => i)
-                .Where(i => !members.Contains(i))
+                .Where(i => !members.Contains(i)) // if the student membership list has (i)community we drop it from the comunities list
                 .ToListAsync();  
                 
             return View(viewModel);
+        }
+
+        //POST students/SetMemberships/5
+        [HttpPost]
+        public async Task<IActionResult> SetMemberships([Bind("StudentID","CommunityID")]CommunityMembership membership)
+        {
+            var Mexists = await _context.Memberships.FindAsync(membership.StudentID,membership.CommunityID); // check if membership exists
+            if(Mexists != null)
+            {
+                _context.Memberships.Remove(Mexists); // remove the existing membership
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                var Sexists = await _context.Students.FindAsync(membership.StudentID); // check if student exists
+                var Cexists = await _context.Communities.FindAsync(membership.CommunityID); // check if community exists
+                if (Sexists == null || Cexists == null)
+                {
+                    return RedirectToAction(nameof(Index)); //the student or community don't exist return to students/index
+                }
+                _context.Memberships.Add(membership);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("EditMemberships", new { id = membership.StudentID });
         }
 
         // GET: Students/Create

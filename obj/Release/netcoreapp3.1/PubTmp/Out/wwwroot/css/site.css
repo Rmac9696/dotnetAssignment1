@@ -1,10 +1,15 @@
 ﻿header {
-    background-image: linear-gradient(white,#4da6ff);
     margin: 0px;
     padding: 10px;
     height: auto;
     font-size: 35px;
-    border-bottom: 5px solid black;
+}
+
+
+
+div.nav {
+    height:100%;
+    width:0;
 }
 
 div.parent {
@@ -21,9 +26,8 @@ body {
     border: none;
     margin: 0px;
     padding: 0px;
-    background-image: url("/misc/background.jpg");
-    background-size: 200%,200%;
-    background-repeat: repeat-y;
+    background-image: url("/misc/watertile.png");
+    background-repeat:repeat;
 }
 
 div.container {
@@ -51,6 +55,7 @@ div.name {
     width: inherit;
     padding: 10px;
     border: 1px solid black;
+    float:left;
 }
 
 div.link {
@@ -59,27 +64,76 @@ div.link {
     width: inherit;
     height: inherit;
     padding: 10px;
+    float:left;
     border: 1px solid black;
 }
 
-    div.link a:link, div.link a:visited, div.link a:active {
+div.wrapper{
+
+    width:auto;
+    padding:0;    
+}
+
+    div.link a:link, div.link a:visited, div.link a:active, div.link a:focus {
+        outline: none;
         text-decoration: none;
         color: #ffbf00;
-        background-color: inherit;
+        background-color: rgba(0,0,0,0);
         width: inherit;
         height: inherit;
         padding: 10px;
-        border: 1px solid black;
     }
 
     div.link:hover, div.link a:hover {
+        outline: none;
         text-decoration: none;
         color: black;
         background-color: #ffbf00;
     }
+table.table {
+    color:inherit;
+    background-color:inherit;
+    border-collapse:collapse;
+}
+table.table td{
+    padding:5px;
+}
+
+    table.table th {
+        padding: 5px;
+        color: inherit;
+        background-color: inherit;
+        border-bottom:dashed;
+        border-bottom-width:1px;
+        border-bottom-color:black;
+    }
+
+tr.success{
+    color: inherit;
+    background-color: palegoldenrod;
+}
 
 table.A tr td {
     color: #4da6ff
+}
+
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:visited{
+    color:blue;
+    text-decoration: none;
+}
+
+a:focus{
+    outline:none;
+}
+
+a:hover {
+    color: #ffbf00;
+    text-decoration: none;
 }
 
 

@@ -177,3 +177,4 @@ C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Release\netcoreapp3.1\sta
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Release\netcoreapp3.1\DOTNET lab4.dll
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Release\netcoreapp3.1\DOTNET lab4.pdb
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Release\netcoreapp3.1\DOTNET lab4.genruntimeconfig.cache
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Release\netcoreapp3.1\Razor\Views\Students\EditMemberships.cshtml.g.cs

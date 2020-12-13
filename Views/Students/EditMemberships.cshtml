@@ -6,6 +6,7 @@
 
 <h1>Edit Memberships:</h1>
 <h2>Student: @Model.student.FullName </h2>
+<hr>
 <table class="table">
     <tr>
         <th>| Community |</th>
@@ -14,30 +15,32 @@
 
     @foreach (var item in Model.student.Membership)
     {
-        string id = item.StudentID + "," + item.CommunityID; // send the composite key of the relationship in as id, delimit with ','
         <tr>
             <td>
                  @item.community.Title 
             </td>
             <td>
-                <a asp-action="SetMembership" asp-route-id="@id"> Unregister </a>
+                <form id="@item.CommunityID" asp-controller="Students" asp-action="SetMemberships" asp-route-StudentID="@Model.student.id" asp-route-CommunityID="@item.CommunityID" role="form">
+                    <a href="#" onclick="document.getElementById('@item.CommunityID').submit()">Unregister</a>
+                </form>
             </td>
         </tr>
     }
-    <hr>
 
     @foreach (var item in Model.communities)
     {
-        string id = Model.student.id + "," + item.ID; // send the composite key of the relationship in as id, delimit with ','
         <tr>
             <td>
                  @item.Title 
             </td>
             <td>
-                 <a asp-action="SetMembership" asp-route-id="@id"> Register </a> 
+                <form id="@item.ID" asp-controller="Students" asp-action="SetMemberships" asp-route-StudentID="@Model.student.id" asp-route-CommunityID="@item.ID" role="form">
+                    <a href="#" onclick="document.getElementById('@item.ID').submit()">Register</a>
+                </form>
             </td>
         </tr>
     }
        
 </table>
+<hr>
 <a asp-action="Index" >back to list</a>
