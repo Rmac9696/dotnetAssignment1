@@ -1,6 +1,7 @@
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\ryanmaclab4 - Web Deploy\profile.arm.json
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNET lab4.exe
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNET lab4.deps.json
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNET lab4.runtimeconfig.json
@@ -9,6 +10,9 @@ C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNE
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNET lab4.pdb
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNET lab4.Views.dll
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\DOTNET lab4.Views.pdb
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -151,6 +155,8 @@ C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNE
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.TagHelpers.input.cache
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.TagHelpers.output.cache
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.RazorCoreGenerate.cache
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Advertisements\Index.cshtml.g.cs
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Advertisements\Upload.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Communities\Create.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Communities\Delete.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Communities\Details.cshtml.g.cs
@@ -158,12 +164,15 @@ C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Communities\Index.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\shared\Error.cshtml.g.cs
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\shared\__Layout.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\Create.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\Delete.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\Details.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\Edit.cshtml.g.cs
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\EditMemberships.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\Index.cshtml.g.cs
+C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.RazorTargetAssemblyInfo.cache
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.RazorTargetAssemblyInfo.cs
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.Views.pdb
@@ -173,8 +182,3 @@ C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\stati
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.dll
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.pdb
 C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.genruntimeconfig.cache
-C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\ryanmaclab4 - Web Deploy\profile.arm.json
-C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\DOTNET lab4.csprojAssemblyReference.cache
-C:\Users\ryan\source\repos\DOTNET lab4\DOTNET lab4\obj\Debug\netcoreapp3.1\Razor\Views\Students\EditMemberships.cshtml.g.cs

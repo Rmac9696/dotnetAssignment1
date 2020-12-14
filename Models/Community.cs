@@ -24,5 +24,7 @@ namespace DOTNET_lab4.Models
 
         public ICollection<CommunityMembership> Membership { get; set; }
 
+        public ICollection<CommunityAdvert> Adverts { get; set; }
+
     }
 }

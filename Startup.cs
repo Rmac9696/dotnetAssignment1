@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Azure.Storage.Blobs;
 using DOTNET_lab4.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,10 @@ namespace DOTNET_lab4
         {
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<SchoolCommunityContext>(options => options.UseSqlServer(connection));
+            services.AddControllersWithViews();
+
+            var blobConnection = Configuration.GetConnectionString("AzureBlobStorage");
+            services.AddSingleton(new BlobServiceClient(blobConnection));
             services.AddControllersWithViews();
         }
 

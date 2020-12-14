@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Upload";
+    Layout = "~/Views/shared/__Layout.cshtml";
+}
+
+<h1>Upload</h1>
+
+<h4>Advertisement</h4>
+<hr />
+        <form asp-action="Upload" enctype="multipart/form-data" method="post"> 
+                    <input name="file" type="file" />
+                <button name="upload" button class="btn-upload">Upload</button>
+        </form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
