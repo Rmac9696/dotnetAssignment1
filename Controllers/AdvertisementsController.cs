@@ -46,6 +46,71 @@ namespace DOTNET_lab4.Controllers
             return View(viewModel);
         }
 
+        public async Task<IActionResult> Delete(int? AdvertisementID, string? CommunityID)
+        {
+            if(AdvertisementID == null || CommunityID == null)
+            {
+                return RedirectToAction("Index","Communities");
+            }
+
+            var model = await _context.Adverts.FindAsync(AdvertisementID, CommunityID);
+
+            if(model == null)
+            {
+                return RedirectToAction("Index", "Communities");
+            }
+            model.Advertisement = await _context.Advertisements.FindAsync(AdvertisementID);
+            return View(model);
+
+        }
+        [HttpPost,ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed([Bind("AdvertisementID", "CommunityID")] CommunityAdvert ad)
+        { 
+            if (ad == null)
+            {
+                return RedirectToAction("Index", "Communities");
+            }
+
+            var image = await _context.Advertisements.FindAsync(ad.AdvertisementID); // check if advertisement exists
+            var community = await _context.Communities.FindAsync(ad.CommunityID); // check if community exists
+            if (image == null || community == null)
+            {
+                return RedirectToAction("Index", "Communities");
+            }
+
+            ad.Community = community;
+            ad.Advertisement = image;
+
+            BlobContainerClient containerClient;
+            try
+            {
+                containerClient = _blobServiceClient.GetBlobContainerClient(containerName);
+            } catch (RequestFailedException e)
+            {
+                return View("Error");
+            }
+            try
+            {
+                var blockBlob = containerClient.GetBlobClient(image.FileName);
+                if (await blockBlob.ExistsAsync())
+                {
+                    await blockBlob.DeleteAsync();
+                }
+                _context.Adverts.Remove(ad);
+                await _context.SaveChangesAsync();
+                _context.Advertisements.Remove(image);
+                await _context.SaveChangesAsync();
+                
+            } catch (RequestFailedException e)
+            {
+                return View("Error");
+            }
+
+            return RedirectToAction("Index", new { id = ad.CommunityID });
+
+        }
+
         public IActionResult Upload(string? id)
         {
             if (id == null)

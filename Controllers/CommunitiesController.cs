@@ -154,6 +154,10 @@ namespace DOTNET_lab4.Controllers
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var community = await _context.Communities.FindAsync(id);
+            if( await _context.Adverts.FirstOrDefaultAsync(m => m.CommunityID == id) != null) // if we have adverts do not delete
+            {
+                return RedirectToAction("Index");
+            }
             _context.Communities.Remove(community);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

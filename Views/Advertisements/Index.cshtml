@@ -33,7 +33,7 @@
                 <img src="@item.Url" style="max-width:400px;"  />
             </td>
             <td>
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Delete" asp-route-AdvertisementID="@item.ID" asp-route-CommunityID="@Model.Community.ID">Delete</a>
             </td>
         </tr>
 }
